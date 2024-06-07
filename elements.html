@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var ele =document.getElementById("di1");
+        console.log(ele);
+    </script>
+   
+</head>
+<body>
+    <div id="di1"> </div>
+    <div id="di2"> </div>
+    <div id="di3" class="hell"> </div>
+    <div id="di4" class="hell"> </div>
+    <div id="di5" class="hell"> </div>
+    <p></p>
+    <p></p>
+    <p></p>
+    <span></span>
+    <span></span>
+    <span></span>
+    <script>
+        //get element by id
+        var ele2 =document.getElementById("di2");
+        ele2.textContent=("hello Buddy");
+        console.log(ele2);
+          //get element by class
+        var ele3 =document.getElementsByClassName("hell");
+        ele3[0].textContent=("hello Buddy -class");
+        console.log(ele3[0]);
+        ele3[1].textContent=("hello Buddy -class2");
+        console.log(ele3[1]);
+        // get element by tag name
+        var ele4 = document.getElementsByTagName("p");
+        ele4[0].textContent=("hello Buddy -tagname");
+        console.log(ele4[0]);  
+        ele4[1].textContent=("hello Buddy -tagname2");
+        console.log(ele4[1]);
+        //get element by tag name
+        //var dev1 =document.getElementsByTagName("tagname");
+       //query selector
+      let qs=document.querySelector("p");
+      console.log(qs);
+      qs.textContent=("hello Buddy -queryselector");
+     //query selector all
+      let qs2= document.querySelectorAll("span");
+      console.log(qs2);
+      qs2[0].innerHTML="<i>inner html</i><br>";
+      console.log(qs2[0]);
+      qs2[1].textContent=("poda deiii");
+      console.log(qs2[1]);
+   
+    </script>
+</body>
+</html>

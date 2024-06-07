@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Interactions</h1>
+    <!-- for alert -->
+    <button onclick="interact()">click to Interact</button>
+    <Script>
+        "use strict;"
+        // for alert interaction
+        function interact(){
+            // alert("hello are we using js alert");
+         var age= 12;
+        if(age>=18){
+            alert("eligible");
+        }
+        else{
+            alert("not eligible");
+        }
+    }
+    function func(){
+        let age=prompt("enter your age: ");
+        // console.log(age);
+
+        if(age>=18 && age<21){
+            alert("eligible");
+        }
+        else if(age>=21 && age<24){
+            alert("service time reduced 75%");
+        }
+        else if(age>=24 && age<27){
+            alert("service time reduced 50%");
+        }
+        else if(age>=27 && age<30){
+            alert("service time reduced 25%");
+        }
+        else{
+            alert("Sorry");
+            console.log("mooditu poda");
+        }
+    }
+    func();
+
+    // prompt
+    let name = prompt("enter your name: ")
+    console.log(name);
+    if(name !=""){
+        console.log("hello "+name);
+    }
+    // conform
+
+    let check="Does delete the file ?";
+    if(confirm(check)==true)     
+    // if(("Does delete the file ?")==true)
+    {
+        console.log("file deleted");
+    }
+    else {
+        console.log("file not deleted");
+    }
+    </Script>
+</body>
+</html>

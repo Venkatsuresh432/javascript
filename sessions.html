@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        page 1
+    </p>
+        <button onclick="setstorage()">get</button><br> <br>
+        <button onclick="getstorage()">set</button><br><br>
+        <a href="sessions2.html">check</a>
+        <script>
+            function setstorage(){
+                sessionStorage.setItem("name","siva");
+                sessionStorage.setItem("age","25");
+            }
+            function getstorage(){
+                console.log(sessionStorage.getItem("name"));
+                console.log(sessionStorage.getItem("age"));
+            }
+        </script>
+</body>
+</html>

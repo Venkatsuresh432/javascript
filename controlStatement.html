@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // if else
+        function func(){
+            let a1=10
+            if (a1==10)
+            {
+                console.log(a1)
+            }
+            else{
+                console.log("Oops sorry")
+            }
+        }
+        func()
+        // for loop
+       function func2() {
+            for(let i=0;i<6;i++)
+            {
+                console.log(i)
+            }  
+         }
+         func2()
+        //  for using object getting variable name
+         function func3(){
+            let a={
+                name:"sss",
+                age:23,
+                company:"yyy"
+            }
+            for(b in a)
+            {
+                console.log(b);
+            }
+         }
+         func3()
+         // for using object getting variable value
+         function func4(){
+            let a={
+                name:"sss",
+                age:23,
+                company:"yyy"
+            }
+            for(b in a)
+            {
+                console.log(a[b]);
+            }
+         }
+         func4()
+         // for using array
+         function func5(){
+            let a=[1,2,3,4,5]
+            for(c of a)
+            {
+                console.log(c);
+            }
+         }
+         func5()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

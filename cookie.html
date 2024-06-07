@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<button onclick="fn()">click</button>
+<p id="con1"></p>
+<p id="con2"></p>
+<script>
+    // initalize a cookie
+        document.cookie="username2 = demo; expires=Thu,06 Jun 2024 12:35:00 IST";
+        document.cookie="user = cookie; value2 = string";
+        document.cookie ="username = suresh; value = string; expires =Thu, 06 Jun 2024 12:22:00 IST";
+    function fn(){
+        // for print an cookie on p tag using id
+        document.getElementById("con1").textContent=document.cookie;
+        // document.getElementById("con2").innerHTML=document.cookie;
+
+        // let decode = decodeURIComponent(document.cookie); // for seperating an cookie 
+        // let c = decode.split(";");
+        // console.log(c);
+
+        let ca=document.cookie.split(";"); // for seperating an cookie method 2
+        console.log(ca);
+
+        // let find = "username";
+
+        for(let i=0;i<ca.length;i++)
+        {
+            let s=ca[i];
+
+            // print all cookie
+            console.log(s);
+
+            //getting an cookie value using index of operator 
+            // console.log(s.indexOf("value"));
+
+            //getting particlar "value"s value 
+            // i inserted cookie three time so this if statement can run three time 
+            if( s.indexOf("username") != -1)
+            {
+                // getting index value of username .if it is not it return -1 
+                let print1 = s.indexOf("username");
+                
+                let print3 = s.indexOf("username") + "username=".length;
+                console.log(print1);
+                console.log(print3);
+                //getting username's values 
+                let print2 = s.indexOf("username2") + "username2=".length;
+                console.log(s.substring(print2));
+            }
+        }
+    }
+</script>
+</body>
+</html>

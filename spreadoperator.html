@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+        //dummy
+        let a=[1,2,3,4], b=[5,6,7];
+        //concatenate two array
+        // let c=console.log(a,b);
+        //spread operator(... vrname) for array
+        let d =[...a,...b];
+        console.log(d);
+
+
+      //spread operator(... vrname) for object
+     function func(){ 
+        // dont provide same keyword as multiple object
+            let e= {
+                brand:'suzuki',
+                year:2000  
+        };
+        let f= {
+                brand1:'yamaha',
+                year2:2020     
+        };
+      console.log(e,f);
+      //og operator
+        let g ={...e,...f}
+        console.log(g);
+    }
+     func();
+
+     
+     //for using array in obj
+     function func2(){
+        let stu1=[
+            {
+                name:"Ram",
+                age:12
+            },
+            {
+                name:"Venki",
+                age:9
+            }
+        ]
+        let stu2=[
+            {
+                name:"Ravi",
+                age:3,
+            },
+            {
+                name:"node",
+                age:5,
+            }
+        ]
+        let stu_det=[...stu1,...stu2]
+        console.log(stu_det);
+     }
+     func2();
+    
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

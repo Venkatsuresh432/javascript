@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- // inline binding -->
+
+<h1 onclick="this.innerHTML = 'Ooops!'">Click on this text1!</h1>
+
+<h1 onclick="this.innerHTML = 'Ooops!'" onmouseover="this.style='color:red'">Click on this text2!</h1>
+<!-- // internal binding -->
+<!-- argument -    onclick="chtext(this) -->
+<h1 onclick="chtext(this)">Click on this text3!</h1>
+
+<h1 id="cl" onclick="chtext2()">Click on this text4!</h1>
+<!-- for button -->
+<button onclick="displayd()">clickhere</button>
+<p id="dem1"> </p>
+<script>
+    function chtext(id)
+    {
+    //  parameter -   chtext(id)   
+    id.innerHTML = 'Ooops!'; 
+     }
+     // annother example
+     function chtext2()
+     {
+        document.getElementById('cl').innerHTML="oops sorry";
+     }
+     function displayd()
+     {
+        document.getElementById('dem1').innerHTML="hello Dude";
+     }
+</script>
+</body>
+</html>

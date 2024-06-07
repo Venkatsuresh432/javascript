@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Events</h2>
+    <p id="countval">initial val is 0</p>
+    <button onclick="countinc()">count+</button>
+    <p id="countval2">initial val is 0</p>
+    <button onclick="countincrease()">count+</button>
+    <script>
+        let count = 0;
+        function countinc()
+        {
+            var countincr = count + 1;
+            // document.getElementById("countval").innerHTML= "the count value is : " + countincr;
+            document.getElementById('countval').innerHTML="the inner val is:  "+ countincr;
+        }
+        // this keyword is used for getting global variable
+        // this incr func is used only in var
+        var count1 = 0;
+        function countincrease(){
+            // var countinc2 = count+1;
+            this.count1 = this.count1 + 1;
+            // console.log("current val: " + this.count1);
+            document.getElementById("countval2").innerHTML="current value is :" +this.count1;
+        }
+        // {onfocus keyword
+        // onsubmit keyword
+        // onload keyword  for first time loading
+        // onreset keyword} used in textbox
+        //{onmouseover  keyword   
+        //onmouseleave keyword}  used in button
+    </script>
+</body>
+</html>

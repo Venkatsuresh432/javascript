@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //scope
+        let a=10;//global scope
+        const c = 55;
+        //function
+        function func2()
+        {
+            const c =23;
+            var b=20;//local scope
+            console.log("hello",a,b);
+            console.log(c);
+            // const c =26;
+            // console.log(c);
+        }
+        // function
+        function func3(){
+            let b=12;
+           console.log(a,b); 
+        }
+        // function
+        function func4(){
+           
+            if(a==10){  
+                const c =33;
+                let d=12;
+                var e=16;
+                console.log(d,e,c);
+            }
+            const c=12;
+            console.log(e,c);
+        }
+        func2();
+        func3();
+        func4();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

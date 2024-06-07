@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">click</button>
+    <p id="con"></p>
+    <script>
+    var x1=document.getElementById("btn");
+        x1.addEventListener("mouseover",fn);
+        x1.addEventListener("click",fn2);
+        x1.addEventListener("mouseout",fn3)
+        function fn(){
+            document.getElementById("con").innerHTML +="mouseover!<br>";
+        }
+        function fn2(){
+            document.getElementById("con").innerHTML +="click!<br>";
+        }
+        function fn3(){
+            document.getElementById("con").innerHTML +="mouseout!<br>";
+        }
+    </script>
+</body>
+</html>

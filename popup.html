@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>   
+</head>
+<body>
+    <button class="demo" onclick="fn()">for alert</button>
+    <button id="demo2" onclick="fn2()">for click</button>
+    <button id="demo3" onclick="fn3()">for prompt</button>
+    <button id="demo4" onclick="fn4()">for textv</button>
+
+
+
+    <p id="init1"></p>
+    <p id="init2"></p>
+    <!-- <br> -->
+    <p id="init3"></p>
+    <p id="init4"></p>
+    <script>
+        // document.getElementsByClassName("demo").addEventListener("click",fn());
+        fn=()=>
+        {
+            
+            alert("clicked");
+            document.getElementById("init1").textContent="alert popup executed.";
+        }
+        // document.getElementById("demo2").addEventListener("click",fn2());
+        fn2=()=>
+        {
+        //  let dis;
+          let text1 = prompt("enter your name: ");
+          if(text1 == null || text1 == "")
+            {
+                //   dis = "user not involved";
+                document.getElementById("init2").textContent="user not involved";
+            }
+          else
+            {
+                // dis = "hello " + text1;
+                document.getElementById("init2").textContent="hello " + text1;
+            }
+        }
+        // document.getElementById("demo2").innerHTML=dis;
+
+        // document.getElementById("demo3").addEventListener("click",fn3());
+
+            fn3=()=>
+            {
+            let text2 = prompt("enter your age: ");
+            // var txt2;
+            if(text2 == null || text2 == ""){
+                alert("user not involved  please give an data: ");  
+                    // document.getElementById("init3").textContent="user not involved  please give an data:"
+             fn3();
+            }
+            else{
+                    if(!isNaN(text2))
+                    {
+                        // alert("validated");
+                        if(confirm("Are you confirm to display your age:"))
+                            {
+                                // txt2 = "your age is " + text2;
+                                document.getElementById("init3").textContent="your age is " + text2;
+                            }
+                        else
+                            {
+                                // txt2 = "you rejected to enter an age";
+                                document.getElementById("init3").textContent="you are not interest to enter an age";           
+                            }
+                     }
+                    else{
+                        alert("please enter an integer value");
+                        fn3();
+                    }
+                }
+            }
+        fn4=()=>{
+            let text3 = prompt("enter your text content: ");
+            if(text3 == null || text3 == ""){
+                alert("user not involved");
+                fn4();
+            }
+            else{
+                    if(isNaN(text3))
+                    {
+
+                            if(confirm("Are you confirm to display your text content:"))
+                            {
+                                document.getElementById("init4").textContent="the given cont is: " + text3;
+                            }
+                            else
+                            {
+                                document.getElementById("init4").textContent="you are not interest to enter an name";
+                            }
+                    }
+                    else{
+                        alert("please enter an string value");
+                        fn4();
+                    }          
+        }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+<p>
+    page 1
+</p>
+    <button onclick="setstorage()">get</button><br><br>
+    <button onclick="getstorage()">set</button><br><br>
+    <a href="localsto2.html">check</a>
+    <script>
+        function setstorage(){
+            localStorage.setItem("name","siva");
+            localStorage.setItem("age","25");
+        }
+        function getstorage(){
+            console.log(localStorage.getItem("name"));
+            console.log(localStorage.getItem("age"));
+        }
+    </script>
+</body>
+</html>

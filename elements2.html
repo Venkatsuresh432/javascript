@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div></div> -->
+        <h1>div block</h1>
+        <h1>div block2</h1>
+        <button onclick="createfile()">create</button>
+    <script>
+        function createfile()
+        {
+        const paragrap=document.createElement("p");
+        paragrap.innerHTML=("this is a paragraph tag");
+        // append child-to join the given content below the given content
+        document.body.appendChild(paragrap);
+        }
+        // createfile();
+        function createfile2()
+        {
+        const button1=document.createElement("button");
+        button1.innerHTML=("Create button");
+        // append child-to join the given content below the given content
+        document.body.appendChild(button1);
+        }
+        createfile2();
+    </script>
+</body>
+</html>

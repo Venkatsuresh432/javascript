@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //named function
+        function func1(){
+            console.log("greetings")
+        }
+        //function with parameter
+        function func2(x,y)
+        {
+            console.log(x+y)
+        }
+        //anonymous function
+        let a2=function(x1)
+        {
+            console.log("hello"+" "+x1)
+        }
+        a2("Buddy");
+        //arrow function
+        //block code with parameter
+        let a3=(x2)=>{
+            console.log("hello"+" "+x2)
+        }
+        a3("buddy");
+        //single expression
+        let a4 = (X3,x4)=>console.log(10+15)
+        a4();           
+        //without parameter 
+        let a5 = () => {
+            console.log("hello")
+        }
+        a5();
+    </script>
+</head>
+<body>
+    <button onclick="func1()">greet</button>
+    <button onclick="func2(10,15)">greet2</button>
+</body>
+</html>

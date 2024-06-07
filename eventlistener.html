@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">click here</button>
+    <p id="con1"></p>
+    <button id="btn2">click here2</button>
+    <p id="con2"></p>
+    <button id="btn3">click here3</button>
+    <script>
+        document.getElementById("btn").addEventListener("click",function1);
+
+        function function1(){
+                 document.getElementById("con1").innerHTML=Date();
+        }
+        
+            document.getElementById("btn2").addEventListener("click",function2);
+
+        function function2(){
+            document.getElementById("con2").textContent="mudiyala mudiyala";
+        }
+        
+        document.getElementById("btn3").addEventListener("click",function3);
+        function function3(){
+            alert("hello");
+        }
+
+    </script>
+</body>
+</html>

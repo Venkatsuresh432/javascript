@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //clear interval
+        let count=0;
+        let a=()=>
+        {
+            count++;
+            console.log("called",count);
+            if(count==10)
+            {
+                //for end the loop
+                clearInterval(c);
+            }
+        }
+        //for button
+        let c = setInterval(a,1000)
+        let b=()=>
+        {
+            clearInterval(c);
+        }
+
+
+        function func1(){
+            let cn=0
+            let fn1=()=>{
+                cn++;
+                console.log("print hello",cn);
+                if(cn==10)
+                {
+                    clearInterval(z,alert("end"));
+                }
+            }
+            let z =setInterval(fn1,1000);
+        }
+        func1();
+    </script>
+</head>
+<body>
+    <button onclick="b()">clear</button>
+</body>
+</html>

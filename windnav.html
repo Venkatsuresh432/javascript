@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cookie enabled</title>
+</head>
+<body>
+    <h3>check if cookie is enabled or not: </h3>
+    <p class="ele1"></p>
+    <p class="ele1"></p>
+    <script>
+            // navigator is a browser
+
+            //navigator platform is used to getting an operating system platform  object="navigator.platform"
+        console.log("os platform",navigator.platform);
+
+            // appName is used to getting an browser platform
+        console.log("browser ",navigator.appName); // output:netscape
+
+        // navigator.appCodeName
+        console.log("browser ",navigator.appCodeName) //output:Mozilla
+            
+        // check if cookies is enabled or not
+       //  object:navigator.cookieEnabled
+       let ele = document.getElementsByClassName("ele1") 
+        
+       if(navigator.cookieEnabled)
+        {
+            ele[0].innerHTML="cookie is enabled"; 
+            console.log("cookie is enabled");
+        }
+        else
+        {
+            ele[0].innerHTML="cookie is disabled";
+            console.log("cookie is disabled");
+        } 
+
+    </script>
+</body>
+</html>

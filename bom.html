@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>BOM</h3>
+    <p id="ele1"></p>
+    <button id="ele2" onclick="fn1()">close</button>
+    <button id="ele2" onclick="fn2()">open</button>
+    <script>
+        document.getElementById("ele1").innerHTML="inner width: "+ window.innerWidth + "px <br>" + "inner height: "+  window.innerHeight + "px";
+        let fn1=()=>{
+            // close the page
+            window.close();
+        }
+        let fn2=()=>{
+            window.open("")
+        }
+    </script>
+</body>
+</html>

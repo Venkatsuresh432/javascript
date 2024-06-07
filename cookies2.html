@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="fn1()">click</button>
+    <p id="cn1"></p>
+    <script>
+        document.cookie ="username1 = parama ; value = script; info = cookie; expires=Thu, 06 Jun 2024 12:14 IST";
+        function fn1() 
+        {
+            // getting cookie value using function with(args)
+            document.getElementById("cn1").innerHTML="hello "+ getCookie("username1");
+        }
+        //function with parameter
+          function getCookie(cn)
+          {
+            //split the cookie using split object
+            let ca =document.cookie.split(";");
+                 // getting all cookie value using for loop
+                for(let i=0;i<ca.length;i++)
+                {
+                    // store a individual value in array element through variable
+                    let c = ca[i];
+                    console.log(c);
+                    // check the condition of array value
+                    // indexOf(variable) can be used to find the given value 
+                    // if the entered value is available send array value as 1 otherwise -1
+                    // the condition satisfies enter in to the fn 
+                    if (c.indexOf(cn) != -1)
+                        {
+                            //print the cookie 
+                            console.log(c);
+                            // print a cookie value using .length object
+                            let print = c.indexOf(cn)+(cn+"=").length;
+                            // return a value to function fn() 
+                            return c.substring(print);
+                        }
+                 }
+        }
+    </script>
+</body>
+</html>
